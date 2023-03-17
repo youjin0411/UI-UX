@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <script>
+        // songs는 곡 목록을 저장하는 배열입니다.
         const songs = [
             "Ditto - NewJeans",
             "OMG - NewJeans",
@@ -12,13 +13,14 @@
             "파이팅 해야지 (Feat. 이영지) - 부석순 (SEVENTEEN)",
             "사건의 지평선 - 윤하(YOUNHA)"
         ];
-
+        // suggestSong 함수는 랜덤으로 곡을 추천해주는 함수입니다.
         function suggestSong() {
             let index = Math.floor(Math.random() * songs.length);
             let suggestion = songs[index];
             return suggestion;
         }
 
+        // searchForSong 함수는 사용자가 입력한 단어가 포함된 곡을 찾아주는 함수입니다.
         function searchForSong(word) {
             word = word.toUpperCase();
             let song;
@@ -31,10 +33,11 @@
             return "없는 곡입니다.";
         }
 
+        // suggestSong 함수를 호출하여 추천곡을 변수에 저장합니다.
         let song = suggestSong();
         document.write("<p>추천곡 : " + song);
-
         let search_data = prompt("검색할 곡의 이름을 입력해주세요");
+        // searchForSong 함수를 호출하여 사용자가 입력한 단어가 포함된 곡을 찾습니다.
         let matchedSong = searchForSong(search_data);
         alert("검색 결과 : " + matchedSong);
     </script>
