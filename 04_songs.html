@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script>
+        const songs = [
+            "Ditto - NewJeans",
+            "OMG - NewJeans",
+            "Teddy Bear - STACY(스테이시)",
+            "Hype boy - NewJeans",
+            "파이팅 해야지 (Feat. 이영지) - 부석순 (SEVENTEEN)",
+            "사건의 지평선 - 윤하(YOUNHA)"
+        ];
+
+        function suggestSong() {
+            let index = Math.floor(Math.random() * songs.length);
+            let suggestion = songs[index];
+            return suggestion;
+        }
+
+        function searchForSong(word) {
+            word = word.toUpperCase();
+            let song;
+            for (let i = 0; i < song.length; i++) {
+                if (song.indexOf(word) >= 0) {
+                    return song;
+                }
+            }
+        }
+    </script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>곡 제시 프로그램</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
